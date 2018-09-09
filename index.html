@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Some things are close to heart</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+            -webkit-font-smoothing: antialiased;
+
+            /* background-color: #e58178; */
+            margin: 0;
+            box-sizing: border-box;
+            background: #26a4c5;
+            background-image: linear-gradient(120deg, #26a4c5, #652ec3);
+        }
+
+        #header {
+            /* height: 50%; */
+            padding: 4rem 2rem;
+            color: rgb(251, 249, 249);
+        }
+
+        .title {
+            font-size: 2.6rem;
+        }
+
+        .desc {
+            font-size: 2rem;
+        }
+
+        #subscribe {
+            width: 30rem;
+            max-width: 80%;
+            margin: 0 auto;
+            /* margin-bottom: 5rem; */
+        }
+
+        #companies {
+            max-width: 90%;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 10rem);
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .inp {
+            min-width: 5rem;
+            padding: 13px;
+            border: 0;
+            font-size: 0.8rem;
+        }
+
+        .frm {
+            display: grid;
+            grid-row-gap: 1rem;
+            grid-column-gap: 1rem;
+            grid-template-areas: "email name" "sbc sbc"
+        }
+
+        @media (max-width: 481px) {
+            .frm {
+                grid-template-areas: "email" "name" "sbc";
+            }
+        }
+
+        #name {
+            grid-area: name;
+        }
+
+        #email {
+            grid-area: email;
+        }
+
+        #subscribe-btn {
+            /* width: 16rem; */
+            padding: 10px;
+            border-radius: 5px;
+
+            background-color: #0dd3c5;
+            color: #fff;
+            border: 2px solid #0dd3c5;
+            box-shadow: 0 14px 24px 0 rgba(0, 0, 0, .33);
+
+            cursor: pointer;
+
+            transition: all .1s ease-in-out;
+
+            letter-spacing: 0.8;
+            font-size: 16px;
+
+            grid-area: sbc;
+        }
+
+        #subscribe-btn:hover {
+            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, .33);
+
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        .fab {
+            font-size: 3rem;
+        }
+
+        .companies-cont {
+            background-color: #fef9f3;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .sbc-txt {
+            height: 4rem;
+        }
+
+        .title-content {
+            margin-bottom: 2rem;
+        }
+
+        .desc-tech {
+            margin-bottom: 2rem;
+            color: #feb753;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <section id="header" class="txt-center">
+        <article class="title-content">
+            <div class="title">Engineering Blogs</div>
+            <div class="desc">Curated list of Engineering blogs from top tech companies</div>
+        </article>
+
+        <article id="subscribe" class="txt-center">
+            <div class="sbc-txt">Subscribe to our newsletter to receive periodic updates</div>
+            <form class="frm">
+                <input id="email" type="email" placeholder="Enter your Email address" class="inp" autofocus="autofocus" />
+                <input id="name" type="name" placeholder="Enter your Name" class="inp" />
+                <button type="submit" id="subscribe-btn">SUBSCRIBE</button>
+            </form>
+        </article>
+    </section>
+    <section class="companies-cont">
+        <div class="desc-tech">Blogs from following top tech companies</div>
+        <article id="companies">
+    </section>
+</div>
+</div>
+<script type="text/javascript">
+    var companies = [
+        { i: 'facebook-f', label: 'Facebook', color: '#3B5998' },
+        { i: 'linkedin-in', label: 'LinkedIn', color: '#007bb6' },
+        { i: 'twitter', label: 'Twitter', color: '#55ACEE' },
+        { i: 'facebook-f', label: 'Facebook', color: '#3B5998' },
+        { i: 'linkedin-in', label: 'LinkedIn', color: '#007bb6' },
+        { i: 'twitter', label: 'Twitter', color: '#55ACEE' },
+        { i: 'facebook-f', label: 'Facebook', color: '#3B5998' },
+
+    ];
+
+    var htmlString = companies.map(function loop(company) {
+        return '<div class="company txt-center"' + 'style="color: ' + company.color + '">' +
+            '<div><i class="fab fa-' + company.i + '"></i></div>' +
+            '<span>' + company.label + '</span>' +
+            '</div>';
+    });
+
+    document.getElementById('companies').innerHTML = htmlString.join('');
+</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+</body>
+
+</html>

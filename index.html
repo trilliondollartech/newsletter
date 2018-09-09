@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf8">
@@ -73,15 +74,15 @@
             }
         }
 
-        #name {
+        .inp-name {
             grid-area: name;
         }
 
-        #email {
+        .inp-email {
             grid-area: email;
         }
 
-        #subscribe-btn {
+        .subscribe-btn {
             /* width: 16rem; */
             padding: 10px;
             border-radius: 5px;
@@ -101,7 +102,7 @@
             grid-area: sbc;
         }
 
-        #subscribe-btn:hover {
+        .subscribe-btn:hover {
             box-shadow: 0 4px 24px 0 rgba(0, 0, 0, .33);
         }
 
@@ -180,10 +181,18 @@
 
         <article id="subscribe" class="txt-center">
             <div class="sbc-txt">Subscribe to our newsletter to receive periodic updates</div>
-            <form class="frm">
-                <input id="email" type="email" placeholder="Enter your Email address" class="inp" autofocus="autofocus" />
-                <input id="name" type="name" placeholder="Enter your Name" class="inp" />
-                <button type="submit" id="subscribe-btn">SUBSCRIBE</button>
+            <form class="frm" action="https://trilliondollartech.us19.list-manage.com/subscribe/post?u=2097167fa90b583e1cc0216f1&amp;id=f8002fb2c6"
+                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Enter your Email address" class="inp inp-email" autofocus="autofocus"
+                       value="" />
+                <input id="mce-FNAME" type="name" name="FNAME" placeholder="Enter your Name" class="inp inp-name" value="" />
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2097167fa90b583e1cc0216f1_f8002fb2c6" tabindex="-1" value=""></div>
+                <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe-btn">SUBSCRIBE</button>
             </form>
         </article>
     </section>

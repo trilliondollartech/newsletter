@@ -116,6 +116,13 @@
             text-align: center;
         }
 
+        .anchor-deco {
+            text-decoration: none;
+        }
+        .anchor-deco:hover {
+            text-decoration: underline;
+        }
+
         .sbc-txt {
             height: 4rem;
         }
@@ -212,14 +219,14 @@
     </section>
     <section id="footer">
         <div id="contact" class="txt-white">Contact us at: </div>
-        <div id="twitter">
+        <a id="twitter" href="https://twitter.com/trilldollartech" class="anchor-deco txt-white" target="_blank">
             <i class="fab fa-twitter" style="font-size: 1rem; color: #55ACEE"></i>
-            <a href="https://twitter.com/trilldollartech" class="txt-white" target="_blank">@trilliondollartech </a>
-        </div>
-        <div id="mail">
+            <span>@trilliondollartech </span>
+        </a>
+        <a href="mailto:thetrilliondollartech@gmail.com" class="anchor-deco txt-white" id="mail">
             <i class="fas fa-envelope" style="font-size: 1rem; color: #e9ecef"></i>
-            <a href="mailto:thetrilliondollartech@gmail.com" class="txt-white">thetrilliondollartech@gmail.com</a>
-        </div>
+            <span>thetrilliondollartech@gmail.com</span>
+        </a>
     </section>
 </div>
 </div>
@@ -227,66 +234,80 @@
     var companies = [{
         i: 'facebook-f',
         label: 'Facebook',
-        color: '#3B5998'
+        color: '#3B5998',
+        url: 'https://research.fb.com/',
     }, {
         i: 'linkedin-in',
         label: 'LinkedIn',
-        color: '#007bb6'
+        color: '#007bb6',
+        url: 'https://engineering.linkedin.com/blog'
     }, {
         i: 'twitter',
         label: 'Twitter',
-        color: '#55ACEE'
+        color: '#55ACEE',
+        url: 'https://blog.twitter.com/developer/en_us.html'
     }, {
         i: 'uber',
         label: 'Uber',
-        color: '#09091a'
+        color: '#09091a',
+        url: 'https://eng.uber.com/'
     }, {
         i: 'amazon',
         label: 'Amazon',
-        color: '#ff9900'
+        color: '#ff9900',
+        url: 'https://www.allthingsdistributed.com/'
     }, {
         i: 'microsoft',
         label: 'Microsoft',
-        color: '#0078d7'
+        color: '#0078d7',
+        url: 'https://www.microsoft.com/en-us/research/'
     }, {
         i: 'google',
         label: 'Google',
-        color: '#4285f4'
+        color: '#4285f4',
+        url: 'https://ai.googleblog.com/'
     }, {
         i: 'instagram',
         label: 'Instagram',
-        color: '#8a3ab9'
+        color: '#8a3ab9',
+        url: 'https://instagram-engineering.com/'
     }, {
         i: 'pinterest',
         label: 'Pinterest',
-        color: '#3B5998'
+        color: '#3B5998',
+        url: 'https://medium.com/@Pinterest_Engineering'
     }, {
         i: 'dropbox',
-        label: 'Droopbox',
-        color: '#007ee5'
+        label: 'Dropbox',
+        color: '#007ee5',
+        url: 'https://dropboxtechblog.wordpress.com/'
     }, {
         i: 'paypal',
         label: 'PayPal',
-        color: '#003087'
+        color: '#003087',
+        url: 'https://www.paypal-engineering.com/'
     }, {
         i: 'slack',
         label: 'Slack',
-        color: '#3eb991'
+        color: '#3eb991',
+        url: 'https://slack.engineering/'
     }, {
         i: 'lyft',
         label: 'Lyft',
-        color: '#ff00bf'
+        color: '#ff00bf',
+        url: 'https://eng.lyft.com/'
     }, {
         i: 'ebay',
         label: 'Ebay',
-        color: '#e53238'
+        color: '#e53238',
+        url: 'https://www.ebayinc.com/stories/blogs/tech/'
     }];
 
     var htmlString = companies.map(function loop(company) {
-        return '<div class="company txt-center"' + 'style="color: ' + company.color + '">' +
+        return '<a class="anchor-deco txt-center" target="_blank" href="' + company.url+ '"' + 'style="color: ' + company.color + '">' +
             '<div><i class="fab fa-' + company.i + '"></i></div>' +
             '<span>' + company.label + '</span>' +
-            '</div>';
+            '</a>';
     });
 
     document.getElementById('companies').innerHTML = htmlString.join('');

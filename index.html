@@ -27,11 +27,19 @@
         }
 
         .title {
-            font-size: 3.2rem;
+            font-size: 2.8rem;
         }
 
         .desc {
             font-size: 1.4rem;
+        }
+
+        #description {
+            width: 35rem;
+            max-width: 80%;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+
         }
 
         #subscribe {
@@ -124,11 +132,15 @@
         }
 
         .sbc-txt {
-            height: 4rem;
+            height: 5rem;
         }
 
         .mg-b-2 {
             margin-bottom: 2rem;
+        }
+
+        .mg-b-4 {
+            margin-bottom: 4rem;
         }
 
         .txt-white {
@@ -139,6 +151,9 @@
             color: #feb753;
         }
 
+        .txt-cream {
+            color: #FEFAE1;
+        }
         .txt-center {
             text-align: center;
         }
@@ -191,13 +206,17 @@
 <body>
 <div id="app">
     <section id="header" class="txt-center">
-        <article class="mg-b-2">
-            <div class="title">Trillion Dollar Tech</div>
-            <div class="desc txt-yellow">Billion dollar companies are revolutionising software world every single day</div>
+        <article class="mg-b-4">
+            <div class="title txt-cream">👨‍💻 Trillion Dollar Tech 👩‍💻 </div>
+            <div class="desc txt-yellow">A weekly newsletter for busy software developers </div>
+        </article>
+
+        <article id="description" class="txt-center">
+            <div class="desc">Top tech companies are investing heavily in revolutionising the tech world every single day. Staying upto date with their latest ongoings is not only required but a necessity now. </div>
         </article>
 
         <article id="subscribe" class="txt-center">
-            <div class="sbc-txt">Subscribe to stay updated with the latest ongoings and get an edge over others</div>
+            <div class="sbc-txt txt-cream">Subscribe to get curated list of not-to-miss articles right into your mailbox</div>
             <form class="frm" action="https://trilliondollartech.us19.list-manage.com/subscribe/post?u=2097167fa90b583e1cc0216f1&amp;id=f8002fb2c6"
                   method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Enter your Email address" class="inp inp-email" autofocus="autofocus"
